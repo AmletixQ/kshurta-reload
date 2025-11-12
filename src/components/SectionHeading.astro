@@ -3,7 +3,7 @@ import hillsSvg from "@assets/icons/hills.svg";
 import { Image } from "astro:assets";
 ---
 
-<article class="flex gap-1.5 items-center">
+<article class="flex gap-1.5 items-center space-x">
   <Image src={hillsSvg} alt="hills" />
   <h3><slot /></h3>
 </article>

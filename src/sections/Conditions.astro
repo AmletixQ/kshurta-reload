@@ -1,0 +1,52 @@
+---
+import firstImage from "@assets/images/cards/first.png";
+import secondImage from "@assets/images/cards/second.png";
+import thirdImage from "@assets/images/cards/third.png";
+
+import Card from "@components/Card.astro";
+import SectionHeading from "@components/SectionHeading.astro";
+---
+
+<section id="conditions" class="flex flex-col gap-7.5">
+  <SectionHeading>Комфортные условия</SectionHeading>
+  <article class="space-x flex gap-5 flex-wrap">
+    <Card image={firstImage}>
+      <Fragment slot="title">
+        <h3>Комфортные палатки от 2 до 4 мест</h3>
+      </Fragment>
+      <Fragment slot="description">
+        <p>
+          Проживание в удобных 2-х и 4-х местных палатках, оснащённых всем
+          необходимым: просторным тамбуром, надувными матрасами и тёплыми
+          спальными мешками.
+        </p>
+      </Fragment>
+    </Card>
+
+    <Card image={secondImage}>
+      <Fragment slot="title">
+        <h3>Шатры для большой компании</h3>
+      </Fragment>
+      <Fragment slot="description">
+        <p>
+          Шатры с обогревателями, освещением, электричеством, двухспальными
+          кроватями и теплыми одеялами для комфортного отдыха для небольших
+          групп и семей.
+        </p>
+      </Fragment>
+    </Card>
+
+    <Card image={thirdImage}>
+      <Fragment slot="title">
+        <h3>Удобные условия для кемпинга</h3>
+      </Fragment>
+      <Fragment slot="description">
+        <p>
+          Если вы хотите установить собственную палатку, мы предоставим вам
+          специальную выделенную зону. Также можно арендовать палатки и спальные
+          мешки для комфорта.
+        </p>
+      </Fragment>
+    </Card>
+  </article>
+</section>

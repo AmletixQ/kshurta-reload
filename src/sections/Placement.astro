@@ -1,0 +1,25 @@
+---
+import placementImage from "@assets/images/placement-ill.png";
+import SectionHeading from "@components/SectionHeading.astro";
+import { Image } from "astro:assets";
+---
+
+<section id="placement" class="space-x flex flex-col gap-7.5">
+  <SectionHeading>Размещение в лагере</SectionHeading>
+  <article class="flex flex-col gap-5">
+    <p>
+      Наш лагерь располагается в солнечной долине Алагирского ущелья на лоне
+      старого горного осетинского аула, в 70 км от города Владикавказ. В месте,
+      пропитанном историей, дышащим легендами и преданиями, в окружении
+      восхитительной природы, вдали от заезженных туристических маршрутов и
+      транспортных магистралей.
+    </p>
+    <p>
+      Мы рады предложить вам размещение в комфортных двух, четырех, шести и
+      девятиместных палатках с удобными тамбурами, надувными матрасами и уютными
+      спальниками. И гарантируем двухразовое питание. А в честь вашего приезда
+      мы накроем праздничный стол.
+    </p>
+    <Image src={placementImage} alt="placement-ill" />
+  </article>
+</section>

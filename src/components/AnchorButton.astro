@@ -1,0 +1,13 @@
+---
+interface Props {
+  type?: "light" | "black";
+}
+const { type = "black" } = Astro.props;
+---
+
+<a
+  href="#form"
+  class={"py-3.5 px-5 flex justify-center items-center rounded-xl" +
+    (type === "black" ? " bg-primary text-white" : " bg-white text-primary")}
+  >Забронировать место
+</a>

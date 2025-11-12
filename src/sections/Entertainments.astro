@@ -1,0 +1,22 @@
+---
+import Accordion from "@components/Accordion.astro";
+import { accordions } from "../constants/accordions";
+import SectionHeading from "@components/SectionHeading.astro";
+---
+
+<section id="entertainment" class="border-b-2 border-green flex flex-col gap-7.5">
+  <SectionHeading>Досуг и развлечения</SectionHeading>
+  <article class="flex flex-col">
+    {
+      accordions.map((acc) => (
+        <Accordion open={acc.open}>
+          <Fragment slot="title">{acc.title}</Fragment>
+          <Fragment slot="description">
+            <p>{acc.description}</p>
+            {acc.small && <span class="text-secondary">{acc.small}</span>}
+          </Fragment>
+        </Accordion>
+      ))
+    }
+  </article>
+</section>

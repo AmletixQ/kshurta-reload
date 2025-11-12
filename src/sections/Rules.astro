@@ -1,0 +1,29 @@
+---
+import firstImage from "@assets/images/rules/first.png";
+import secondImage from "@assets/images/rules/second.png";
+
+import { first, second } from "@constants/rules";
+import { Image } from "astro:assets";
+---
+
+<section id="rules">
+  <article>
+    <Image src={firstImage} alt="first-image-rules" />
+    <div class="bg-primary text-white px-6 py-7.5 flex flex-col gap-5">
+      <h2>Что с собой брать?</h2>
+      <ul class="ml-3 list-disc marker:text-green flex flex-col gap-2.5">
+        {first.map((v) => <li>{v}</li>)}
+      </ul>
+    </div>
+  </article>
+
+  <article>
+    <Image src={secondImage} alt="second-image-rules" />
+    <div class="bg-green text-white px-6 py-7.5 flex flex-col gap-5">
+      <h2>Правила</h2>
+      <ul class="ml-3 list-disc flex flex-col gap-2.5">
+        {second.map((v) => <li>{v}</li>)}
+      </ul>
+    </div>
+  </article>
+</section>

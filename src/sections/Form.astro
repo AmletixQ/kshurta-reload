@@ -1,0 +1,52 @@
+---
+import formImage from "@assets/images/form-ill.png";
+import { Image } from "astro:assets";
+---
+
+<section id="form" class="space-x flex flex-col gap-7.5 mb-12.5">
+  <Image src={formImage} alt="form-ill" />
+
+  <article class="flex flex-col gap-7.5">
+    <div class="text-center flex flex-col gap-2.5">
+      <h2>Оставить заявку</h2>
+      <h4 class="font-normal">
+        Оставь заявку, чтобы отправиться в это путешествие
+      </h4>
+    </div>
+    <form action="" class="flex flex-col gap-7.5">
+      <div class="flex flex-col gap-5">
+        <div
+          class="flex flex-col gap-1 px-6 py-2.5 border-2 border-primary rounded-xl"
+        >
+          <label class="text-primary text-[12px]" for="name">Имя</label>
+          <input
+            id="name"
+            placeholder="Иван Иванов"
+            type="text"
+            class="outline-none border-none"
+          />
+        </div>
+
+        <div
+          class="flex flex-col gap-1 px-6 py-2.5 border-2 border-primary rounded-xl"
+        >
+          <label class="text-primary text-[12px]" for="phonenumber"
+            >Телефон</label
+          >
+          <input
+            id="phonenumber"
+            placeholder="+7 900 800 00 00"
+            type="tel"
+            inputmode="tel"
+            class="placeholder:font-inter outline-none border-none"
+          />
+        </div>
+      </div>
+
+      <button
+        class="py-3.5 px-5 flex items-center justify-center bg-primary text-white rounded-xl"
+        >Оставить заявку</button
+      >
+    </form>
+  </article>
+</section>

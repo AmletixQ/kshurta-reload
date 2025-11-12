@@ -1,0 +1,20 @@
+---
+import momentsImage from "@assets/images/moments-ill.png";
+import AnchorButton from "@components/AnchorButton.astro";
+import { Image } from "astro:assets";
+---
+
+<section id="moments" class="text-white">
+  <article class="py-7.5 px-6 bg-green flex flex-col gap-10">
+    <div class="flex flex-col gap-2.5">
+      <h2>Запечатлим яркие моменты!</h2>
+      <h6>
+        На территории нашего лагеря работает профессиональный фотограф, который
+        запечатлеет все яркие моменты вашего отдыха. А за отдельную стоимость мы
+        проведем фотосессию в осетинских национальных костюмах.
+      </h6>
+    </div>
+    <AnchorButton type="light" />
+  </article>
+  <Image src={momentsImage} alt="moments-image" width={860} />
+</section>

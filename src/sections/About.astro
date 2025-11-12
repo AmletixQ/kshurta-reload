@@ -1,0 +1,22 @@
+---
+import aboutIll from "@assets/images/hero-ill.png";
+import AnchorButton from "@components/AnchorButton.astro";
+import { Image } from "astro:assets";
+---
+
+<section id="about" class="space-x flex flex-col gap-10">
+  <Image src={aboutIll} alt="hero-ill" width={640} />
+
+  <article class="flex flex-col gap-2.5">
+    <h1 class="font-semibold">Палаточный лагерь «Седой Кшурт»</h1>
+    <h6>
+      Место, где чистый горный воздух, потрясающие виды и настоящая свобода
+      сливаются воедино. Здесь вас ждут захватывающие походы, уютные вечера у
+      костра и полное единение с природой. Независимо от того, ищете ли вы
+      активный отдых или тихий уголок для перезагрузки, у нас есть всё для
+      комфортного пребывания в горах.
+    </h6>
+
+    <AnchorButton />
+  </article>
+</section>

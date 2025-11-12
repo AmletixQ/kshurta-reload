@@ -1,0 +1,61 @@
+---
+import arrowIcon from "@assets/icons/arrow.svg";
+import { Image } from "astro:assets";
+
+interface Props {
+  open?: boolean;
+}
+
+const { open = false } = Astro.props;
+---
+
+<style>
+  summary::-webkit-details-marker,
+  summary::marker {
+    display: none;
+  }
+  [x-collapse] {
+    max-height: 0;
+    transition: max-height 0.2s ease-in-out;
+  }
+</style>
+
+<details open={open} class="py-3.5 group border-t-2 border-green">
+  <summary
+    class="flex items-center space-x justify-between lg:cursor-pointer list-none"
+  >
+    <h4 class="font-normal">
+      <slot name="title" />
+    </h4>
+    <Image
+      src={arrowIcon}
+      alt="arrow-icon"
+      class="transition-all duration-200 ease-in-out group-open:rotate-90"
+    />
+  </summary>
+  <div
+    x-collapse
+    class="overflow-hidden space-x transition-[max-height] duration-200 ease-in-out"
+  >
+    <div class="pt-3">
+      <slot name="description" />
+    </div>
+  </div>
+</details>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("[x-collapse]").forEach((el) => {
+      const details = el.closest("details");
+      if (!details) return;
+      if (!(el instanceof HTMLElement)) return;
+
+      const update = () => {
+        el.style.maxHeight = details.open ? `${el.scrollHeight}px` : "0px";
+      };
+
+      details.addEventListener("toggle", update);
+      update();
+    });
+  });
+</script>
