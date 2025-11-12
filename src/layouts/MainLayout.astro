@@ -1,0 +1,30 @@
+---
+import Header from "@components/Header.astro";
+import "../styles/global.css";
+import Footer from "@components/Footer.astro";
+---
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Палаточный лагерь «Седой Кшурт» в Северной Осетии — идеальное место для отдыха на природе! Окунитесь в атмосферу уюта и приключений среди живописных гор и чистых рек. Лагерь «Седой Кшурт» предлагает комфортное размещение в палатках, разнообразные развлечения для всей семьи: походы, мастер-классы, спортивные игры, экскурсии и вечерние костры. Насладитесь свежим горным воздухом, великолепными пейзажами и тёплой атмосферой дружбы. Добро пожаловать в сердце Северной Осетии — в лагерь «Седой Кшурт», где каждый найдёт отдых по душе!"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <title>Кемпинг &quot;Седой Кшурт&quot;</title>
+  </head>
+  <body class="text-primary flex flex-col gap-12.5">
+    <Header />
+
+    <main class="flex flex-col gap-25">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

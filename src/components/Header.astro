@@ -1,8 +1,10 @@
 ---
-
+import logoImage from "@assets/images/logos/logo.png";
+import burgerToggle from "@assets/icons/burger-toggle.svg";
+import { Image } from "astro:assets";
 ---
 
-<header class="flex items-center justify-between pb-12.5">
-  <img class="w-[97px] h-[68px]" src="/images/logos/mobile.png" alt="logo" />
-  <img src="/burger-toggle.svg" alt="burger-toggle" />
+<header class="space-x flex items-center justify-between">
+  <Image class="w-[97px] h-[68px]" src={logoImage} alt="logo" />
+  <Image src={burgerToggle} alt="/icons/burger-toggle" />
 </header>
